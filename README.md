@@ -4,6 +4,9 @@
     <a href="https://github.com/nlp-uoregon/mlmm-evaluation/blob/main/LICENSE">
         <img alt="GitHub" src="https://img.shields.io/badge/Code%20License-Apache_2.0-green.svg">
     </a>
+    <a href="https://github.com/nlp-uoregon/mlmm-evaluation/blob/main/DATA_LICENSE">
+        <img alt="GitHub data" src="https://img.shields.io/badge/Data%20License-CC%20By%20NC%204.0-red.svg">
+    </a>
 </div>
 
 ## Overview
