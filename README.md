@@ -4,11 +4,11 @@
 
 ## Install
 
-To install `lm-eval` from the github repository main branch, run:
+To install `lm-eval` from the our repository main branch, run:
 
 ```bash
-git clone https://github.com/EleutherAI/lm-evaluation-harness
-cd lm-evaluation-harness
+git clone https://github.com/nlp-uoregon/mlmm-evaluation.git
+cd mlmm-evaluation
 pip install -e ".[multilingual]"
 ```
 
