@@ -44,6 +44,10 @@ For instance, if you want to evaluate our [Okapi Vietnamese model](https://huggi
 bash scripts/run.sh vi uonlp/okapi-vi-bloom
 ```
 
+## Leaderboard
+
+We maintain a [leaderboard](https://huggingface.co/spaces/uonlp/open_multilingual_llm_leaderboard) for tracking the progress of multilingual LLM. 
+
 ## Acknowledgements
 Our framework inherited largely from the [lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness) repo from EleutherAI. Please also kindly cite their repo if you use the code.
 
