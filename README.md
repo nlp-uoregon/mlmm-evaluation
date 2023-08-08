@@ -2,6 +2,13 @@
 
 ## Overview
 
+This repo contains benchmark datasets designed for the evaluation of Multilingual Large Language Models (LLMs). These datasets are intended for evaluating the models across 26 different languages and encompass three distinct tasks: ARC, HellaSwag, MMLU:
+
+- [**ARC**](https://allenai.org/data/arc): A new dataset of 7,787 genuine grade-school level, multiple-choice science questions, assembled to encourage research in advanced question-answering.
+- [**HellaSwag**](https://allenai.org/data/hellaswag): HellaSWAG is a dataset for studying grounded commonsense inference. It consists of 70k multiple choice questions about grounded situations: each question comes from one of two domains -- activitynet or wikihow -- with four answer choices about what might happen next in the scene. The correct answer is the (real) sentence for the next event; the three incorrect answers are adversarially generated and human verified, so as to fool machines but not humans.
+- [**MMLU**](https://arxiv.org/pdf/2009.03300.pdf): This dataset contains multiple-choice questions derived from diverse fields of knowledge. The test covers subjects in the humanities, social sciences, hard sciences, and other essential areas of learning for certain individuals.
+
+Current, our framework support 26 following languages: ru,de,zh,fr,es,it,nl,vi,id,ar,hu,to,da,sk,UK,ca,sr,hr,hi,bn,ta,ne,ml,Mr,te,kn. Our technical paper with evaluation results on standard multilingual models (e.g. BLOOM, LLAMA, and our [Okapi models](https://github.com/nlp-uoregon/Okapi) can be found here: [here](https://arxiv.org/pdf/2307.16039.pdf).
 ## Install
 
 To install `lm-eval` from the our repository main branch, run:
@@ -13,7 +20,7 @@ pip install -e ".[multilingual]"
 ```
 
 ## Basic Usage
-Firstly, you need to download the multilingual evaluation dataset by using the following script:
+Firstly, you need to download the multilingual evaluation datasets by using the following script:
 ```bash
 bash scripts/download.sh
 ```
@@ -27,6 +34,9 @@ For instance, if you want to evaluate our [Okapi Vietnamese model](https://huggi
 ```bash
 bash scripts/run.sh vi uonlp/okapi-vi-bloom
 ```
+
+## Acknowledgements
+Our framework inherited mostly from the great repo of [EleutherAI](https://github.com/EleutherAI/lm-evaluation-harness). Naturally, you should also cite their original paper and repo.
 
 ## Citation
 If you use the data, model or code in this repository, please cite:
