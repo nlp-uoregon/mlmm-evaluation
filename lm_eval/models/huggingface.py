@@ -495,17 +495,17 @@ class AutoCausalLM(HuggingFaceAutoLM):
         stopping_criteria = stop_sequences_criteria(
             self.tokenizer, stop, input_ids.shape[1], input_ids.shape[0]
         )
-
-        generations = self.model.generate(
-            input_ids=input_ids,
-            attention_mask=attention_mask,
-            # GPT style models require the `generate` `max_length` arg to include the
-            # context length, so we instead set `max_new_tokens` which is the number
-            # of new tokens to generate, excluding the current number of tokens.
-            max_new_tokens=max_tokens,
-            stopping_criteria=stopping_criteria,
-            do_sample=False,
-        )
+        with torch.inference_mode():
+            generations = self.model.generate(
+                input_ids=input_ids,
+                attention_mask=attention_mask,
+                # GPT style models require the `generate` `max_length` arg to include the
+                # context length, so we instead set `max_new_tokens` which is the number
+                # of new tokens to generate, excluding the current number of tokens.
+                max_new_tokens=max_tokens,
+                stopping_criteria=stopping_criteria,
+                do_sample=False,
+            )
         return utils.select_continuation_from_batch_left_padding(
             generations, max_context_size=inputs["input_ids"].size(1)
         )
@@ -668,14 +668,14 @@ class AutoSeq2SeqLM(HuggingFaceAutoLM):
         stopping_criteria = stop_sequences_criteria(
             self.tokenizer, stop, 1, input_ids.shape[0]
         )
-
-        generations = self.model.generate(
-            input_ids=input_ids,
-            attention_mask=attention_mask,
-            max_new_tokens=max_tokens,
-            stopping_criteria=stopping_criteria,
-            do_sample=False,
-        )
+        with torch.inference_mode():
+            generations = self.model.generate(
+                input_ids=input_ids,
+                attention_mask=attention_mask,
+                max_new_tokens=max_tokens,
+                stopping_criteria=stopping_criteria,
+                do_sample=False,
+            )
         return generations
 
 
