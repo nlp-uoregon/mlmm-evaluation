@@ -1,4 +1,4 @@
-<h1 align="center"> <p> Multilingual Large Language Models Evaluation </p></h1>
+<h1 align="center"> <p> Evaluation Framework for Multilingual Large Language Models </p></h1>
 
 <div align="center">
     <a href="https://github.com/nlp-uoregon/mlmm-evaluation/blob/main/LICENSE">
@@ -25,6 +25,8 @@ Currently, our datasets support 26 languages: Russian, German, Chinese, French, 
 </p>
 
 These datasets are translated from the original ARC, HellaSwag, and MMLU datasets in English using ChatGPT. Our technical paper for Okapi to describe the datasets along with evaluation results for several multilingual LLMs (e.g., BLOOM, LLaMa, and our Okapi models) can be found [here](https://arxiv.org/pdf/2307.16039.pdf).
+
+**Usage and License Notices**: Our evaluation framework is intended and licensed for research use only. The datasets are CC BY NC 4.0 (allowing only non-commercial use) that should not be used outside of research purposes.
 
 ## Install
 
