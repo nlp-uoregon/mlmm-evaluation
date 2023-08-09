@@ -11,16 +11,18 @@
 
 ## Overview
 
-This repo contains benchmark datasets designed for the evaluation of Multilingual Large Language Models (LLMs). These datasets are intended for evaluating the models across 26 different languages and encompass three distinct tasks: ARC, HellaSwag, MMLU:
+This repo contains benchmark datasets designed for the evaluation of Multilingual Large Language Models (LLMs). These datasets are intended for evaluating the models across 26 different languages and encompass three distinct tasks: ARC, HellaSwag, and MMLU. This is released as a part of our [Okapi framework](https://github.com/nlp-uoregon/Okapi) for multilingual instruction-tuned LLMs with reinforcement learning from human feedback.
+
 
 - [**ARC**](https://allenai.org/data/arc): A new dataset of 7,787 genuine grade-school level, multiple-choice science questions, assembled to encourage research in advanced question-answering.
-- [**HellaSwag**](https://allenai.org/data/hellaswag): HellaSWAG is a dataset for studying grounded commonsense inference. It consists of 70k multiple choice questions about grounded situations: each question comes from one of two domains *activitynet* or *wikihow* with four answer choices about what might happen next in the scene. The correct answer is the (real) sentence for the next event; the three incorrect answers are adversarially generated and human-verified, so as to fool machines but not humans.
+- [**HellaSwag**](https://allenai.org/data/hellaswag): HellaSWAG is a dataset for studying grounded commonsense inference. It consists of 70k multiple choice questions about grounded situations: each question comes from one of two domains *activitynet* or *wikihow* with four answer choices about what might happen next in the scene. The correct answer is the (real) sentence for the next event; the three incorrect answers are adversarially generated and human verified, so as to fool machines but not humans.
 - [**MMLU**](https://arxiv.org/pdf/2009.03300.pdf): This dataset contains multiple-choice questions derived from diverse fields of knowledge. The test covers subjects in the humanities, social sciences, hard sciences, and other essential areas of learning for certain individuals.
 
-Current, our framework support 26 following languages: ru, de, zh, fr, es, it, nl, vi, id, ar, hu, to, da, sk, uk, ca, sr, hr, hi, bn, ta, ne, ml, mr, te, kn. Our technical paper with evaluation results on standard multilingual models (e.g. BLOOM, LLAMA, and our [Okapi models](https://github.com/nlp-uoregon/Okapi) can be found here: [here](https://arxiv.org/pdf/2307.16039.pdf).
+Currently, our datasets support 26 languages: ru, de, zh, fr, es, it, nl, vi, id, ar, hu, to, da, sk, uk, ca, sr, hr, hi, bn, ta, ne, ml, mr, te, kn. These datasets are translated from the original ARC, HellaSwag, and MMLU datasets using ChatGPT. Our technical paper for Okapi to describe the datasets along with evaluation results for several multilingual LLMs (e.g., BLOOM, LLaMa, and our Okapi models) can be found [here](https://arxiv.org/pdf/2307.16039.pdf).
+
 ## Install
 
-To install `lm-eval` from our repository main branch, run:
+To install `lm-eval` from the our repository main branch, run:
 
 ```bash
 git clone https://github.com/nlp-uoregon/mlmm-evaluation.git
@@ -44,15 +46,11 @@ For instance, if you want to evaluate our [Okapi Vietnamese model](https://huggi
 bash scripts/run.sh vi uonlp/okapi-vi-bloom
 ```
 
-## Leaderboard
-
-We maintain a [leaderboard](https://huggingface.co/spaces/uonlp/open_multilingual_llm_leaderboard) for tracking the progress of multilingual LLM. 
-
 ## Acknowledgements
-Our framework inherited largely from the [lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness) repo from EleutherAI. Please also kindly cite their repo if you use the code.
+Our framework inherited mostly from the great repo of [EleutherAI](https://github.com/EleutherAI/lm-evaluation-harness). Naturally, you should also cite their original paper and repo.
 
 ## Citation
-If you use the data, model, or code in this repository, please cite:
+If you use the data, model or code in this repository, please cite:
 
 ```bibtex
 @article{dac2023okapi,
