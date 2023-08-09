@@ -30,7 +30,7 @@ These datasets are translated from the original ARC, HellaSwag, and MMLU dataset
 
 ## Install
 
-To install `lm-eval` from the our repository main branch, run:
+To install `lm-eval` from our repository main branch, run:
 
 ```bash
 git clone https://github.com/nlp-uoregon/mlmm-evaluation.git
@@ -54,11 +54,15 @@ For instance, if you want to evaluate our [Okapi Vietnamese model](https://huggi
 bash scripts/run.sh vi uonlp/okapi-vi-bloom
 ```
 
+## Leaderboard
+
+We maintain a [leaderboard](https://huggingface.co/spaces/uonlp/open_multilingual_llm_leaderboard) for tracking the progress of multilingual LLM. 
+
 ## Acknowledgements
-Our framework inherited mostly from the great repo of [EleutherAI](https://github.com/EleutherAI/lm-evaluation-harness). Naturally, you should also cite their original paper and repo.
+Our framework inherited largely from the [lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness) repo from EleutherAI. Please also kindly cite their repo if you use the code.
 
 ## Citation
-If you use the data, model or code in this repository, please cite:
+If you use the data, model, or code in this repository, please cite:
 
 ```bibtex
 @article{dac2023okapi,
